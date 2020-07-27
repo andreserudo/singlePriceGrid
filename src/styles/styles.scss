@@ -1,0 +1,145 @@
+@import 'variables';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: $lightGray;
+  font-family: 'Karla', sans-serif;
+}
+
+
+.container{
+  height: 98vh;  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  .content{        
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .5fr 1fr;
+
+    box-shadow: 1px 8px 58px 6px rgba(207,223,238,1);
+
+    margin: 0 auto;
+    max-width: $widthDesktop;
+    .title{    
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      display: flex;
+      flex-direction: column;
+
+      background-color: white;
+
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      padding: 2rem;
+
+      h1{
+        color: $cyan;
+        font-weight: 700;
+        font-size: 18px;
+
+        padding-bottom: 1.5rem;
+      }
+
+      strong{
+        color: $brightYellow;
+        padding-bottom: .5rem;
+      }
+
+      span{
+        color: $grayishBlue;
+      }
+    }
+
+
+    .plans{
+      grid-row: 2;
+            
+      background-color: $cyan;
+      border-bottom-left-radius: 10px;
+
+      padding: 2rem;      
+      color: white;
+      h1{
+        
+        font-weight: 700;
+        font-size: 18px;  
+
+        padding-bottom: 1rem;        
+      }
+
+      .value{
+        display: flex;
+        align-items: center;
+
+        padding-bottom: .5rem;
+        span{
+          font-size: xx-large;          
+          font-weight: 700;
+        }
+        p{
+          margin-left: .5rem;          
+        }
+      }
+
+      p{
+        font-size: smaller;
+      }
+
+      button{
+        width: 100%;
+        height: 3rem;
+
+        border-radius: 10px;
+        border-color: transparent;
+        background-color: $brightYellow;
+        color: white;        
+
+        margin-top: 1rem;        
+        cursor: pointer;
+
+        &:hover{
+          border-color: $brightYellowShadow;
+        }
+
+        &:focus{
+          outline: none;
+        }
+      }
+    }
+
+    .features{
+      grid-row: 2;      
+
+      background-color: $lightBlue;
+      border-bottom-right-radius: 10px;
+
+      padding: 2rem;
+
+      h1{
+        color: white;
+        font-weight: 700;
+        font-size: 18px;  
+
+        padding-bottom: 1rem;
+      }
+
+      p{
+        color: white;
+        font-size: smaller;
+
+        margin-bottom: .25rem;
+      }
+
+    }
+
+  }
+}
