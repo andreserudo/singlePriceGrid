@@ -37,6 +37,16 @@ body {
   max-width: 600px;
 }
 
+@media only screen and (max-width: 630px) {
+  .container .content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr .5fr 1fr;
+        grid-template-rows: 1fr .5fr 1fr;
+    max-width: 300px;
+  }
+}
+
 .container .content .title {
   -ms-grid-column: 1;
       grid-column-start: 1;
@@ -54,6 +64,13 @@ body {
   padding: 2rem;
 }
 
+@media only screen and (max-width: 630px) {
+  .container .content .title {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+}
+
 .container .content .title h1 {
   color: #2ab2af;
   font-weight: 700;
@@ -66,8 +83,15 @@ body {
   padding-bottom: .5rem;
 }
 
+@media only screen and (max-width: 630px) {
+  .container .content .title strong {
+    padding-bottom: 1rem;
+  }
+}
+
 .container .content .title span {
   color: #98a6bd;
+  line-height: 1.5rem;
 }
 
 .container .content .plans {
@@ -77,6 +101,12 @@ body {
   border-bottom-left-radius: 10px;
   padding: 2rem;
   color: white;
+}
+
+@media only screen and (max-width: 630px) {
+  .container .content .plans {
+    border-bottom-left-radius: 0px;
+  }
 }
 
 .container .content .plans h1 {
@@ -111,11 +141,13 @@ body {
 .container .content .plans button {
   width: 100%;
   height: 3rem;
-  border-radius: 10px;
+  border-radius: 5px;
   border-color: transparent;
   background-color: #c0df34;
   color: white;
-  margin-top: 1rem;
+  font-weight: 400;
+  font-size: medium;
+  margin-top: 1.5rem;
   cursor: pointer;
 }
 
@@ -133,6 +165,14 @@ body {
   background-color: #4abebd;
   border-bottom-right-radius: 10px;
   padding: 2rem;
+}
+
+@media only screen and (max-width: 630px) {
+  .container .content .features {
+    -ms-grid-row: 3;
+    grid-row: 3;
+    border-bottom-left-radius: 10px;
+  }
 }
 
 .container .content .features h1 {

@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mediasQueries';
 
 *{
   margin: 0;
@@ -27,9 +28,18 @@ body{
 
     margin: 0 auto;
     max-width: $widthDesktop;
+
+    @include responsive(mobile){
+      grid-template-columns: 1fr ;
+      grid-template-rows: 1fr .5fr 1fr;  
+      max-width: $widthMobile;
+    }
     .title{    
       grid-column-start: 1;
       grid-column-end: 3;
+      @include responsive(mobile){
+        grid-column: 1;
+      }
 
       display: flex;
       flex-direction: column;
@@ -52,19 +62,27 @@ body{
       strong{
         color: $brightYellow;
         padding-bottom: .5rem;
+        @include responsive(mobile){
+          padding-bottom: 1rem;
+        }        
       }
 
       span{
         color: $grayishBlue;
+        line-height: 1.5rem;
       }
     }
 
 
     .plans{
-      grid-row: 2;
+      grid-row: 2;      
             
       background-color: $cyan;
       border-bottom-left-radius: 10px;
+
+      @include responsive(mobile){      
+        border-bottom-left-radius: 0px;
+      }
 
       padding: 2rem;      
       color: white;
@@ -98,12 +116,14 @@ body{
         width: 100%;
         height: 3rem;
 
-        border-radius: 10px;
+        border-radius: 5px;
         border-color: transparent;
         background-color: $brightYellow;
         color: white;        
+        font-weight: 400;
+        font-size: medium;
 
-        margin-top: 1rem;        
+        margin-top: 1.5rem;        
         cursor: pointer;
 
         &:hover{
@@ -118,6 +138,10 @@ body{
 
     .features{
       grid-row: 2;      
+      @include responsive(mobile){
+        grid-row: 3;
+        border-bottom-left-radius: 10px;                
+      }
 
       background-color: $lightBlue;
       border-bottom-right-radius: 10px;
