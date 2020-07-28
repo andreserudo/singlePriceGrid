@@ -6,7 +6,7 @@
 
 This is my solution to the Four Card feature section challenge for [Frontend Mentor](https://www.frontendmentor.io/). 
 
-You can check this repository deployed [here](https://four-cards-serudo.vercel.app/) with [Vercel](https://vercel.com/).
+You can check this repository deployed [here](https://single-price-grid-serudo.vercel.app/) with [Vercel](https://vercel.com/).
 
 To know more about the challenge please read more details in the next section.
 
